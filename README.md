@@ -23,3 +23,16 @@ Data Architecture: Designing a Modern Data Warehouse Using Medallion Architectur
 ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
 Data Modeling: Developing fact and dimension tables optimized for analytical queries.
 Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+
+3: 🧠 My Design Decisions
+
+- Chose **Medallion Architecture** because it cleanly separates raw ingestion 
+  from transformation — the same pattern used in enterprise Databricks/Azure environments
+- Used **Star Schema** in the Gold layer for optimised analytical query performance
+- Structured ETL scripts to be re-runnable (idempotent) — a production-ready habit
+
+4: 🚀 What I'd Build Next
+
+- Migrate the pipeline to **PySpark** to handle larger data volumes
+- Add automated **data quality checks** between layers
+- Connect the Gold layer to a Power BI / Tableau dashboard for end-to-end visibility
